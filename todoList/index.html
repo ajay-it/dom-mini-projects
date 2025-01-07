@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <section id="todo-list-section">
+      <h1>Todo List</h1>
+
+      <div class="todo-list-container">
+        <form id="todo-form" action="">
+          <input type="text" id="todo-input" placeholder="item" />
+        </form>
+        <ul class="todo-list">
+          <li>
+            <input type="text" value="JavaScript" readonly />
+            <button type="button" id="edit-btn">
+              <img src="/images/pencil.svg" alt="pencil" />
+            </button>
+            <button type="button" id="save-btn">
+              <img src="/images/save.svg" alt="save" />
+            </button>
+            <button type="button" id="delete-btn">
+              <img src="/images/delete.svg" alt="delete" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

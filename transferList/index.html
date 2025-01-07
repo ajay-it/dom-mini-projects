@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Transfer List</title>
+  </head>
+  <body>
+    <section id="transfer-list-section">
+      <h1>Transfer List</h1>
+      <div class="list-container">
+        <div class="left-list-container">
+          <ul class="left-list">
+            <li>
+              <input type="checkbox" id="js-checkbox" />
+              <label for="js-checkbox">JS</label>
+            </li>
+            <li>
+              <input type="checkbox" id="html-checkbox" />
+              <label for="html-checkbox">HTML</label>
+            </li>
+            <li>
+              <input type="checkbox" id="css-checkbox" />
+              <label for="css-checkbox">CSS</label>
+            </li>
+            <li>
+              <input type="checkbox" id="ts-checkbox" />
+              <label for="ts-checkbox">TS</label>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-container">
+          <button type="button" id="move-all-left-btn">&lt;&lt;</button>
+          <button type="button" id="move-selected-left-btn" disabled>
+            &lt;
+          </button>
+          <button type="button" id="move-selected-right-btn" disabled>
+            &gt;
+          </button>
+          <button type="button" id="move-all-right-btn">&gt;&gt;</button>
+        </div>
+        <div class="right-list-container">
+          <ul class="right-list">
+            <li>
+              <input type="checkbox" id="react-checkbox" />
+              <label for="react-checkbox">React</label>
+            </li>
+            <li>
+              <input type="checkbox" id="angular-checkbox" />
+              <label for="angular-checkbox">Angular</label>
+            </li>
+            <li>
+              <input type="checkbox" id="vue-checkbox" />
+              <label for="vue-checkbox">Vue</label>
+            </li>
+            <li>
+              <input type="checkbox" id="svelte-checkbox" />
+              <label for="svelte-checkbox">Svelte</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

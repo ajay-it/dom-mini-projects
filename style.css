@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section > h1 {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+  box-shadow: 0px 2px 5px #dcdada;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Transfer List */
+
+.list-container {
+  width: 95%;
+  height: 16rem;
+  border: solid 1px #000;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.left-list,
+.right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0rem 1rem;
+}
+
+.list-container input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+.left-list-container {
+  border-right: solid 1px #000;
+  width: 45%;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  margin: 1rem;
+}
+
+.btn-container button {
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.right-list-container {
+  border-left: solid 1px #000;
+  width: 45%;
+}
+
+/* Todo List */
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todo-form {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+#todo-input {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.todo-list button {
+  width: 1rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+#save-btn {
+  display: none;
+}
+
+.todo-list button img {
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+}
+
+.todo-list input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  field-sizing: content;
+  padding: 0.2rem;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.counter-container h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+#input-value {
+  field-sizing: content;
+  min-width: 4.5rem;
+  font-size: 1rem;
+  padding: 0.2rem 0 0.2rem 0.2rem;
+}
+
+.counter-container button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: aqua;
+  border: 1px solid #8b8a8a;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
