@@ -53,16 +53,17 @@ const handleRightListItem = (event) => {
 
 const handleButtonClick = (event) => {
   if (event.target.type === "button") {
+    leftListItems = document.querySelectorAll(".left-list li");
+    rightListItems = document.querySelectorAll(".right-list li");
     switch (event.target.id) {
       case "move-all-left-btn":
         {
           for (const item of rightListItems) {
             leftList.append(item);
             item.children[0].checked = false;
+            delete selectedRightListItems[item.children[0].id];
           }
 
-          leftListItems = document.querySelectorAll(".left-list li");
-          rightListItems = document.querySelectorAll(".right-list li");
           moveSelectedLeftBtn.disabled = true;
         }
         break;
@@ -72,9 +73,8 @@ const handleButtonClick = (event) => {
             const checkbox = document.getElementById(item);
             checkbox.checked = false;
             leftList.append(checkbox.parentNode);
+            delete selectedRightListItems[item];
           }
-          leftListItems = document.querySelectorAll(".left-list li");
-          rightListItems = document.querySelectorAll(".right-list li");
           moveSelectedLeftBtn.disabled = true;
         }
         break;
@@ -84,22 +84,23 @@ const handleButtonClick = (event) => {
             const checkbox = document.getElementById(item);
             checkbox.checked = false;
             rightList.append(checkbox.parentNode);
+            delete selectedLeftListItems[item];
           }
           moveSelectedRightBtn.disabled = true;
-          leftListItems = document.querySelectorAll(".left-list li");
-          rightListItems = document.querySelectorAll(".right-list li");
         }
         break;
       case "move-all-right-btn": {
         for (const item of leftListItems) {
           rightList.append(item);
           item.children[0].checked = false;
+          delete selectedLeftListItems[item.children[0].id];
         }
-        leftListItems = document.querySelectorAll(".left-list li");
-        rightListItems = document.querySelectorAll(".right-list li");
+
         moveSelectedRightBtn.disabled = true;
       }
     }
+    leftListItems = document.querySelectorAll(".left-list li");
+    rightListItems = document.querySelectorAll(".right-list li");
     if (leftListItems.length > 0) {
       moveAllRightBtn.disabled = false;
     } else {

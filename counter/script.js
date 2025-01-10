@@ -22,5 +22,5 @@ const handleBtnClick = (event) => {
 controlBtn.addEventListener("click", handleBtnClick);
 resetBtn.addEventListener("click", () => {
   inputValue.value = 10;
-  displayCounter.innerText = 2;
+  displayCounter.innerText = 0;
 });
